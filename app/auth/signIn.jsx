@@ -31,10 +31,12 @@ export default function SignIn() {
         secureTextEntry 
         style={styles.textInput} 
       />
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Sign In</Text>
+      <TouchableOpacity 
+            style={styles.button}
+            onPress={() => router.push('/(tabs)/home')}
+            >
+            <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>
-      
       <View style={{
         display: 'flex',
         flexDirection: 'row',
@@ -45,7 +47,7 @@ export default function SignIn() {
             Don't have an account?
         </Text>
         <Pressable
-        onPress={() => router.push('/auth/signUp')}>
+        onPress={() => router.push('/signUp')}>
             <Text style={{color: Colors.PRIMARY}}>Create New Account</Text>
         </Pressable>
       </View>
