@@ -3,22 +3,19 @@ export const PraticeOption = [
         name: 'Quiz',
         image: require('./../assets/images/quizz.png'),
         icon: require('./../assets/images/quiz.png'),
-        path: '/quiz'
+        path: '/practice/quiz'
     },
     {
         name: 'Flashcards',
         image: require('./../assets/images/flashcard.png'),
         icon: require('./../assets/images/layers.png'),
-        path: '/flashcards'
-
+        path: '/practice/flashcards'
     },
     {
         name: 'Question & Ans',
         image: require('./../assets/images/notes.png'),
         icon: require('./../assets/images/qa.png'),
-        path: '/questionAnswer'
-
-
+        path: '/practice/qa'
     }
 ]
 

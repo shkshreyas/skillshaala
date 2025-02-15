@@ -15,10 +15,12 @@ import { PraticeOption } from '../../constant/Option';
 import Colors from '../../constant/Colors';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
+import { useRouter } from 'expo-router';
 
 export default function Home() {
   const scrollY = new Animated.Value(0);
   const { width } = Dimensions.get('window');
+  const router = useRouter();
 
   const headerHeight = scrollY.interpolate({
     inputRange: [0, 100],
@@ -64,6 +66,7 @@ export default function Home() {
                 key={index}
                 onPress={() => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                  router.push(item.path);
                 }}
                 style={{
                   width: width * 0.4,
@@ -73,7 +76,12 @@ export default function Home() {
                   padding: 15,
                   alignItems: 'center',
                   justifyContent: 'center',
-                  height: 150
+                  height: 150,
+                  elevation: 3,
+                  shadowColor: '#000',
+                  shadowOffset: { width: 0, height: 2 },
+                  shadowOpacity: 0.1,
+                  shadowRadius: 8,
                 }}
               >
                 <Image 
